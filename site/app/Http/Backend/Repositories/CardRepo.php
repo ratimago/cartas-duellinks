@@ -29,6 +29,7 @@ class CardRepo extends BaseRepo
 
     public function setSectionName()
     {
+
         return 'Cards';
     }
 
@@ -45,6 +46,8 @@ class CardRepo extends BaseRepo
             $request->file('image')->move($destinationPath, $fileNameImage);
 
             $image = true;
+        }else{
+            $fileNameImage = $item->image;
         }
 
         $data = [

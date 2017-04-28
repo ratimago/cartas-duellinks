@@ -54,10 +54,12 @@ class CardController extends BaseController{
             $request['image'] = null;
         }
         //------------ Logotipo ------------
-        $request->hasFile('image-dealership')
-            ? $request->merge(['image' => $this->saveFile($request, 'image-dealership', public_path('filesUpdates/Concesionarios'), uniqid('image'))])
+        /*
+        $request->hasFile('image')
+            ? $request->merge(['image' => $this->saveFile($request, 'image', public_path('imagenes/caryas'), uniqid('image'))])
             : null
         ;
+        */
         return $this->doUpdate($request, $id);
     }
 

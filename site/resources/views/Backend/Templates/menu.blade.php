@@ -35,7 +35,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a href="#"><img
+                                    <a href="cartas"><img
                                                 src={{ asset('images/car-icon.png') }} class="img-circle"
                                                 alt="imagen circular"> Cartas</a>
                                 </h4>

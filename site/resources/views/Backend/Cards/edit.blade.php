@@ -38,6 +38,7 @@
                 <div class="panel panel-default panel-form">
                     <div class="panel-body">
                         <h3 class="text-center">Alta de cartas - Duel Links</h3>
+                        <hr>
                         {!!Form::Open(['url' => route('cards.update',$id), 'files' => true, 'class' => "form-horizontal", 'role'=>'form'])!!}
 
                         <div class="form-group">
@@ -71,7 +72,23 @@
                             </div>
 
                         <div class="form-group">
-                            {!!Form::Label('type_monster','Tipo de carta Monstruo:',['class'=>'col-md-3 control-label'])!!}
+                            {!!Form::Label('type_monster','Tipo:',['class'=>'col-md-3 control-label'])!!}
+                            <div class="col-md-8">
+                                {!!Form::select('type_monster',
+                                    ['' => 'Seleccionar',
+                                    'light'   => "Luz",
+                                    'dark'    => "Oscuridad",
+                                    'water'   => "Agua",
+                                    'fire'    => 'Fuego',
+                                    'earth'   => 'Tierra',
+                                    'wind'    => "Viento",
+                                    ] ,'dark', ['class'=>'form-control select-type'])!!}
+                                {!!$errors->first('type_monster','<div class="text-danger">:message</div>')!!}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            {!!Form::Label('monster_race','Tipo de carta Monstruo:',['class'=>'col-md-3 control-label'])!!}
                             <div class="col-md-8">
                                 {!!Form::select('type_monster',
                                     ['' => 'Seleccionar',
@@ -100,13 +117,13 @@
 
 
 
-                                    ] , @$item->type_dealership, ['class'=>'form-control select-type'])!!}
-                                {!!$errors->first('type_dealership','<div class="text-danger">:message</div>')!!}
+                                    ] , @$item->monster_race, ['class'=>'form-control select-type'])!!}
+                                {!!$errors->first('type_monster_card','<div class="text-danger">:message</div>')!!}
                             </div>
                         </div>
+                        <hr>
 
-
-
+                        <h3> Magias / Trampas</h3>
                         <div class="form-group">
                             {!!Form::Label('type_magic_trap_card','Tipo de carta Magica/Trampa:',['class'=>'col-md-3 control-label'])!!}
                             <div class="col-md-8">
@@ -124,11 +141,11 @@
                                     'spell_ritual'      => "Magica de Ritual",
 
 
-                                    ] , @$item->type_dealership, ['class'=>'form-control select-type'])!!}
+                                    ] , @$item->type_magic_card_trap, ['class'=>'form-control select-type'])!!}
                                 {!!$errors->first('type_dealership','<div class="text-danger">:message</div>')!!}
                             </div>
                         </div>
-                        {{$item}}
+                        <hr>
                         <div class="form-group">
                             {!!Form::Label('text','Texto de la carta:',['class'=>'col-md-3 control-label'])!!}
                             <div class="col-md-8">
@@ -149,7 +166,7 @@
                             @else
                                 <div class="col-sm-6 col-md-4">
                                     <div class="thumbnail">
-                                        <img src="{{ asset('filesUpdates/Concesionarios/'.@$item->image) }}"
+                                        <img src="{{ asset('imagenes/cartas/'.@$item->image) }}"
                                              class="img-rounded" alt="Cinque Terre" width="100px"
                                              height="100px">
                                     </div>
