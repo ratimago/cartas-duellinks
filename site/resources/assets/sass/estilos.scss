@@ -1,0 +1,38 @@
+/* plugins */
+@import "materialize/materialize";
+@import "estructura/colores";
+@import "estructura/reset-materialize";
+@import "estructura/mixins";
+@import "sitio/fuentes";
+@import "estructura/header-simple"; 
+@import "estructura/footer";
+@import "estructura/titulos";
+@import "estructura/titulos";
+@import "estructura/slider-general";
+@import "estructura/menu-generico-internas";
+@import "estructura/redactor";
+@import "estructura/animaciones";
+@import "estructura/generales";
+@import "estructura/menu-camiones";
+
+@import "paginas/home";
+@import "paginas/errores";
+@import "paginas/postventa";
+@import "paginas/formularios";
+@import "paginas/camiones";
+@import "paginas/concesionarios";
+@import "paginas/aplicaciones"; 
+@import "paginas/avisos"; 
+@import "paginas/blog";
+@import "paginas/interna-blog";
+@import "paginas/intranet";
+@import "paginas/impresion";
+
+@import "plugins/animate";
+@import "plugins/owl.carousel";
+@import "plugins/owl.theme.default";
+@import "plugins/custom-scrollbar";
+@import "plugins/jquery.dop.ThumbnailGallery";
+@import "plugins/jquery.jscrollpane"; 
+@import "plugins/default"; 
+@import "plugins/frst-timeline-style-4";  

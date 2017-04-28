@@ -1,0 +1,117 @@
+main.intranet{
+    .row-sin-margen{
+        margin-bottom: 0;
+    }
+    &.login{
+        background: url(/imagenes/intranet/isuzu-intranet-descargables.jpg) no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+        h1{
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+    }
+
+    section.sistemas{
+        .cuadros{
+            background-size: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            &.uno{
+                background-image: url(/imagenes/intranet/isuzu-intranet-sistema.jpg);
+            }
+
+            &.dos{
+                background-image: url(/imagenes/intranet/isuzu-intranet-educacion.jpg);
+            }
+
+            &.tres{
+                background-image: url(/imagenes/intranet/isuzu-intranet-comunicacion.jpg);
+            }
+
+            h2{
+                font: {
+                	size: 22px;
+                	weight: 400;
+                }
+                min-height: 48px;
+                text-transform: uppercase;
+            }
+            p{
+                font: {
+                	size: 16px;
+                	weight: 300;
+                }
+                max-height: 95px;
+                min-height: 95px;
+                overflow: hidden;
+            }
+            a{
+                max-width: 160px !important;
+            }
+        }
+    }
+
+    section.documentos{
+        background: url(/imagenes/intranet/isuzu-intranet-descargables.jpg) no-repeat center;
+        background: {
+        	size: auto 100%;
+        }
+
+        @media #{$large-and-up}{
+            min-height: 70%;
+        }
+        
+        h3{
+            font: {
+            	size: 30px;
+            	weight: 400;
+            }
+            text-transform: uppercase;
+        }
+
+        ul{
+            li{
+                display: block;
+                height: 70px;
+                margin-bottom: 30px;
+                text-align: center;
+
+                @media #{$large-and-up}{
+                    margin-bottom: 0;
+                    text-align: left;
+                }
+
+                p,a{
+                    @media #{$large-and-up}{
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                }
+
+                p{
+                    font: {
+                    	size: 16px;
+                    	weight: 300;
+                    }
+                    margin: 0 0 15px;
+
+                    @media #{$large-and-up}{
+                        margin: 0;
+                        width: 75%;
+                    }
+                }
+
+                a{
+                    font: {
+                    	size: 12px;
+                    	weight: 400;
+                    }
+                    max-width: 70px;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

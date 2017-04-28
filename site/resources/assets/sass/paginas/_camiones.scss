@@ -1,0 +1,175 @@
+@charset 'utf-8';
+main.camiones{
+    section.encabezado{
+        h1{
+            @media(max-width: 340px){
+                font-size: 7vw;
+            }
+        }
+    }
+    
+    section.descripcion{
+        @media #{$medium-and-down}{
+            background-image: none !important;
+        }
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+
+        .camion{
+            @media #{$large-and-up}{
+                text-align: right !important;
+            }
+            img{
+                margin-top: 20px; 
+            }
+        }
+
+        .logotipo{
+            img{
+                max-height: 127px;
+            }
+            @media #{$large-and-up}{
+                padding: 20px 0 20px;
+                text-align: left !important;
+            }
+        }
+
+        .resumen{
+            @media #{$large-and-up}{
+                margin-left: 0;
+            }
+            width: 100%;
+            max-width: 550px;
+            margin: 0px auto;
+            background-color: rgba(27, 27, 27, 0.75);
+            padding: 32px 14px 26px 18px;
+
+            h2,p{
+                color:white;
+            }
+
+            h2{
+                color: white;
+                font-size: 30px;
+                font-weight: 500;
+                margin: 0;
+                text-transform: uppercase;
+            }
+
+            p{
+                font-family: 'Lato', sans-serif;
+                color:white;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 18px;
+                text-align: justify;
+            }
+        }
+
+        .botonera{
+            a{
+                display: block;
+                margin: 15px auto;
+                padding: 0;
+                width: 160px;
+
+                @media #{$medium-and-up}{
+                    display: inline-block;
+                    margin-left: 35px;
+
+                    &:first-child{
+                        margin-left: 0px;
+                    }
+                }
+
+                &.btn{
+                    border: 1px solid $rojo;
+                    transition: all 0.5s;
+
+                    &:hover{
+                        background-color: transparent !important;
+                        border: 1px solid white;
+                    }
+
+                    img{
+                        vertical-align: text-top;
+                    }
+                }
+
+                &.transparente{
+                    background-color: transparent !important;
+                    border: 1px solid white;
+                    transition: all 0.5s; 
+
+                    &:hover{
+                        background-color: $rojo !important;
+                        border: 1px solid $rojo;
+                    }
+                }
+            }
+        }
+    }
+    
+    section.caracteristicas{
+        .row{
+            margin-bottom: 0;
+        }
+        h3{
+            color:#545454;
+            font-size: 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding-left: 70px;
+
+            &::before{
+                @include tamano($ancho: 64px, $alto: 43px);
+                content: ' ';
+                background-repeat: no-repeat;
+                background-position: center;
+                position: absolute;
+                margin-left: -67px;
+            }
+
+            &.capacidad{
+                &::before{
+                    background-image: url(/imagenes/camiones/icono-capacidad-de-carga.png);
+                }
+            }
+
+            &.caracteristicas{
+                &::before{
+                    background-image: url(/imagenes/camiones/icono-caracteristicas.png);
+                }
+            }
+
+            &.tecnologia{
+                &::before{
+                    background-image: url(/imagenes/camiones/icono-tecnologia.png);
+                }
+            }
+        }
+
+        ul{
+            font-family: 'Lato', sans-serif;
+            color:  #545454;
+            font-size: 18px;
+            font-weight: 400;
+            margin-left: 70px;
+
+            li:before {
+                content: "";
+                color: red;
+            }
+        }
+    }
+
+    section.galeria-imagenes{
+        background-image: url(/imagenes/postventa/txt-bk.jpg);
+
+        .row{
+            margin-bottom: 0;
+        }
+    }
+}

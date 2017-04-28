@@ -1,0 +1,228 @@
+/////////*****   Tamano total de la pagina
+.container {
+    max-width: 960px;
+}
+
+@media #{$large-and-up} {
+    .container {
+        width: 100%;
+    }
+}
+
+/////////*****   Ancho del menu
+@media #{$large-and-up} {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 82px;
+        line-height: 82px;
+        transition: all 1s;
+
+        &.animacionNav{
+            height: 50px;
+            line-height: 50px;
+        }
+    }
+    
+    .navbar-fixed {
+        height: 82px;
+        transition: all 1s;
+
+        &.animacionNav{
+            height: 50px;
+        }
+    }
+}
+
+
+@media #{$medium-and-up} {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 67px;
+        line-height: 67px;
+    }
+    
+    .navbar-fixed {
+        height: 67px;
+    }
+}
+
+@media (max-width: 739px) {
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 122px;
+        line-height: 82px;
+    }
+    
+    .navbar-fixed {
+        height: 122px;
+    }
+}
+
+#sidenav-overlay{
+    z-index: 996;
+}
+
+/////////*****   botones
+.btn{
+    background-color: $rojo;
+    font-size: 18px;
+    font-weight: lighter;
+    height: 43px;
+    line-height: 43px;
+    max-width: 251px;
+    width: 100%;
+
+    &:hover, &:active{
+        background-color: lighten($rojo, 10%);
+    }
+
+    &:focus{
+        background-color: darken($rojo, 10%);
+    }
+}
+
+/////////*****   formularios
+.input-field{
+    label{
+        color: white;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        &.active{
+            font-size: 20px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+
+    &.col{
+        label{
+            left: 24px !important;
+            max-width: 80%;
+        }
+    }
+}
+
+input:not([type]).validate+label,
+input[type=text].validate+label,
+input[type=password].validate+label,
+input[type=email].validate+label,
+input[type=url].validate+label,
+input[type=time].validate+label,
+input[type=date].validate+label,
+input[type=datetime].validate+label,
+input[type=datetime-local].validate+label,
+input[type=tel].validate+label,
+input[type=number].validate+label,
+input[type=search].validate+label,
+textarea.materialize-textarea.validate+label{
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 80%;
+    text-transform: uppercase;
+
+}
+
+.select-wrapper+label{
+    top: -30px;
+}
+
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search]{
+    background-color: white;
+    box-sizing: border-box;
+    height: 44px;
+    margin-bottom: 37px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+textarea.materialize-textarea{
+    background-color: white;
+    box-sizing: border-box;
+    padding-left: 12px;
+    padding-right: 12px;
+    min-height: 134px;
+}
+
+.select-wrapper{
+    input{
+        &.select-dropdown{
+            background-color: white;
+            box-sizing: border-box;
+            height: 44px;
+            margin-bottom: 37px;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+
+    span{
+        &.caret{
+            color: $rojo;
+            font-size: 18px;
+            right: 10px;
+            z-index: 2;
+        }
+    }
+}
+
+[type="checkbox"]:checked+label{
+    &::before{
+        border-bottom: 2px solid $rojo;
+        border-right: 2px solid $rojo;
+    }
+}
+
+.dropdown-content li>a, .dropdown-content li>span{
+    color: black;
+}
+
+.select-dropdown.multiple-select-dropdown{
+    li{
+        img{
+            float: left;
+            margin: 5px -10px 5px 60px;
+            width: auto;
+        }
+        
+        &:first-child{
+            span{
+                margin-left: -30px;
+                
+                label{
+                    &::before{
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+        span{
+            margin-left: 115px;
+            
+            label{
+                &::before{
+                    margin-left: -135px;
+                }
+            }
+        }
+    }
+}
+
+input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label{
+    color: $rojo !important;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid $rojo !important;
+    box-shadow: 0 1px 0 0 $rojo !important;
+}

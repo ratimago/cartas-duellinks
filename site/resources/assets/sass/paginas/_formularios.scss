@@ -1,0 +1,60 @@
+main.formularios{
+    @include fondosEstaticos ($fondos-url: '/imagenes/financiamiento/fondo-financiamiento.jpg');
+    
+    section.formulario{
+        .titulo{
+            .row{
+                margin-bottom: 0;
+            }
+            
+            h2{
+                font-size: 32px;
+                font-weight: 400;
+                margin-bottom: 0;
+                margin-top: 45px;
+                text-transform: uppercase;
+            }
+        }
+        
+        .row-sin-aire{
+            margin-bottom: 0;
+        }
+        
+        button.btn{
+            margin-bottom: 20px;
+        }
+        
+        .g-recaptcha{
+            -webkit-transform:scale(0.90);
+            -webkit-transform-origin:0 0;
+            margin: auto;
+            margin-bottom: 12px;
+            max-width: 275px;
+            transform:scale(0.90);
+            transform-origin:0 0;
+        }
+        
+        input.error {
+            border: 2px solid darken($rojo, 20%);
+        }
+        
+        .error {
+            color: darken($rojo, 20%);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .valign-wrapper{
+            display: block;
+            @media #{$large-and-up}{
+                align-items: flex-end;
+                display: flex;
+            }
+        }
+
+        .ocultar{
+            display: none;
+        }
+    }
+}

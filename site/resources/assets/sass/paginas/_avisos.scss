@@ -1,0 +1,18 @@
+main.avisos{
+    section.aviso{
+        @include fondosEstaticos ($fondos-url: '/imagenes/financiamiento/fondo-financiamiento.jpg');
+
+        .row{
+            margin-bottom: 0;
+        }
+
+        .contenido-aviso{
+            background-color:  rgba(27, 27, 27, 0.75);
+            margin: 30px 0;
+            padding: 30px;
+            p{
+                color: white;
+            }
+        }
+    }
+}

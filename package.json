@@ -1,0 +1,25 @@
+{
+  "name": "isuzu",
+  "version": "1.0.0",
+  "description": "Sitio para isuze mexico",
+  "main": "gruntfile.js",
+  "scripts": {
+    "masclicks": "grunt watch",
+    "start": "grunt watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "masclicks:~/repos-git/isuzu.git"
+  },
+  "author": "Luis Gerardo Ramirez Carmona para Masclicks",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-penthouse": "^0.4.0",
+    "matchdep": "^1.0.1"
+  }
+}

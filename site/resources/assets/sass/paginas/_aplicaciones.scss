@@ -1,0 +1,53 @@
+main.aplicaciones{
+    @include fondosEstaticos ($fondos-url: '/imagenes/aplicaciones/fondo-aplicaciones.jpg');
+    
+    .row{
+        margin-bottom: 0;
+    }
+
+    h3{
+        color:  white;
+        font-size: 24px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    h2{
+        color:  white;
+        font-size: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .boton-solicita{
+        padding: 26px 22px 15px;
+    }
+
+    .descripcion{
+        background-color:  rgba(27, 27, 27, 0.75);
+        margin-bottom: 20px;
+        padding: 15px;
+
+        p{
+            color:  #eaeaea;
+            font-size: 16px;
+            font-weight: 300;
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+        }
+    }
+
+    .informacion-aplicaciones{
+        ul{
+            height: 400px;
+            margin-bottom: 20px;
+            min-width: 222px;
+            li{
+                a{
+                    font-size: 19px;
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+}

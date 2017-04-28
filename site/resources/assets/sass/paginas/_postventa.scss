@@ -1,0 +1,376 @@
+main.postventa{
+    @include fondosEstaticos ($fondos-url: '/imagenes/postventa/fondo-postventa.jpg');
+    padding-bottom: 20px;
+    section.contenido-postventa{
+        padding-top: 20px;
+
+        p{
+            font-weight: normal !important;
+            font-size: 16px !important;
+
+            &.aviso{
+                font-weight: bold !important;
+            }
+        }
+        
+        .row{
+            margin-bottom: 0;
+        }
+        
+        ul.menu{
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            
+            li{
+                display: block;
+                line-height: 31px;
+                transition: background-color 0.5s;
+                
+                &:hover, &.active{
+                    background: $rojo url(/imagenes/flecha.png) no-repeat 95% center;
+                    color: white;
+
+                    a{
+                        color: white;
+                    }
+                }
+
+                &.active{
+                    background: darken($rojo, 10%) url(/imagenes/flecha.png) no-repeat 95% center;
+                }
+                    
+                a{
+                    color: white;
+                    display: block;
+                    font-size: 19px;
+                    font-weight: lighter;
+                    text-transform: uppercase;
+                    line-height: 31px;
+                    max-width: 90%;
+                    padding: 5px 0 5px 22px;
+                    transition: background-color 0.5s;
+                    width: 100%;
+                }
+            }
+        }
+        
+        article.galeria{
+            background-image: url(/imagenes/postventa/txt-bk.jpg);
+            margin-top: 0;
+            padding-top: 33px;
+        }
+
+        article.notas-imagenes{
+            .row{
+                margin-bottom: 42px;
+            }
+
+            a.boton-largo{
+                height: auto;
+                max-width: 460px;
+            }
+
+            .nota{
+                background-color: rgba(0, 0, 0, 0.6);
+                box-sizing: border-box;
+                color:white;
+                padding: 18px 35px 27px 50px;
+
+                h2{
+                    font: {
+                    	size: 34px;
+                    	weight: 500;
+                    }
+                    text-transform: uppercase;
+                    margin-top: 0;
+                }
+
+                p, ul li, ol li{
+                    font: {
+                    	family: 'Lato', sans-serif;
+                    	size: 16px;
+                    	weight: normal;
+                    }
+                    color: white;
+                }
+
+                ul{
+                    li{
+                        list-style-type:disc;
+                        margin-left: 20px;
+                    }
+                }
+
+                ol{
+                    li{
+                        margin-left: -20px;
+                    }
+                }
+
+                strong{
+                    font-weight: bold;
+                }
+
+                img{
+                    max-width: 100%;
+                }
+
+                &.especial{
+                    ul{
+                        display: inline-block;
+                        margin: 0;
+                        vertical-align: text-top;
+                        width: 47%;
+                        clear: both;
+
+                        li{
+                            margin-bottom: 15px;
+                            padding-right: 10px;
+                        }
+                    }
+                }
+
+                .submenu{
+                    ul{
+                        list-style: none;
+                        margin-top: 0; 
+
+                        li{
+                            background-color: $rojo;
+                            display: block;
+                            margin-left: 0;
+                            @media #{$medium-and-up}{
+                                display: inline-block;
+                            }
+                            margin-bottom: 15px;
+                            min: {
+                            	height: 50px;
+                            }
+                            padding: 0 15px;
+                            transition: all 0.5s;
+                            vertical-align: text-top;
+                            
+                            a{
+                                color: white;
+                                display: block;
+                                font: {
+                                    size: 16px;
+                                    weight: 400;
+                                }
+                                text-transform: uppercase;
+                                vertical-align: middle;
+                            }
+
+                            &.active, &:hover{
+                                background-color: darken($rojo, 10%);
+                            }
+
+                            &:first-child{
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .imagenes{
+                img{
+                    max-width: 100%;
+                    @media #{$medium-and-down}{
+                        margin-top: 20px;
+                    }
+
+                    @media #{$large-and-up}{
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .imagenes-acercade{
+                    background-color:  #121315;
+                    padding-bottom: 20px;
+
+                    p{
+                        color:white;
+                        font-family: 'Lato', sans-serif;
+
+                        &.nombre{
+                            font: {
+                            	size: 16px;
+                            	weight: 700;
+                            }
+                            margin: 0;
+                        }
+
+                        &.cargo{
+                            font: {
+                            	size: 16px;
+                            	weight: 300;
+                            }
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        article.refacciones, article.garantias{
+            h2{
+                color: white;
+                font: {
+                	size: 44px;
+                	weight: 400;
+                }
+                margin-top: 0;
+                text-transform: uppercase;
+            }
+
+            p{
+                font: {
+                	family: 'Lato', sans-serif;
+                	size: 18px;
+                	weight: 300;
+                }
+                
+                strong{
+                    font-weight: 700;
+                }
+            }
+
+            .carousel{
+                height: 350px !important;
+
+                .carousel-item{
+                    height: 300px !important;
+                    width: 280px !important;
+                }
+            }
+
+            .collapsible{
+                border: {
+                    bottom: none !important;
+                    left: none !important;
+                    right: none !important;
+                    top: none !important;
+                }
+
+                li{
+                    &.active{
+                        .collapsible-header{
+                            i, em{
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+
+                    .collapsible-header{
+                        i, em{
+                            transform-origin: 73% 50%;
+                            transition: all 0.5s;
+                        }em{
+                            transform-origin: 50% 50% !important;
+                        }
+                    }
+                }
+
+                .collapsible-header{
+                    color: $rojo;
+                    font-size: 30px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+
+                    i,em{
+                        font-size: 3rem !important;
+                    }
+                }
+
+                .collapsible-body{
+                    border-bottom: none !important;
+                    
+                    .texto-transparencia{
+                        background-color:  rgba(27, 27, 27, 0.75);
+                        padding: 17px 30px;
+
+                        h3{
+                            color: white;
+                            font: {
+                                size: 44px;
+                                weight: 400;
+                            }
+                            margin-top: 0;
+                            text-transform: uppercase;
+                        }
+
+                        p{
+                            color: white;
+                            font: {
+                                family: 'Lato', sans-serif;
+                                size: 18px;
+                                weight: 300;
+                            }
+                            padding: 0 !important;
+                        }
+
+                        &.tablas{
+                            table{
+                                margin-top: 37px;
+
+                                thead{
+                                    background-color: #434343;
+                                    color: white;
+                                    font-size: 30px;
+                                    font-weight: 400;
+                                    text-transform: uppercase;
+
+                                    @media #{$large-and-up}{
+                                        border-right: none;
+                                    }
+
+                                    th{
+                                        border-radius: 0;
+                                    }
+                                }
+
+                                tbody{
+                                    background-color: #fafafa;
+                                    
+                                    td{
+                                        border-left: 1px solid #d0d0d0;
+                                        border-radius: 0;
+                                        font: {
+                                            family: 'Lato', sans-serif;
+                                            size: 20px;
+                                            weight: 300;
+                                        }
+                                        text-align: center;
+
+                                        @media #{$large-and-up}{
+                                            text-align: center;
+                                            width: 30%;
+
+                                            &:first-child{
+                                                text-align: left;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            p{
+                                text-align: center;
+                                
+                                &:first-child{
+                                    margin-top: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn.localiza{
+                max-width: 100% !important;
+                width: auto !important;
+            }
+        }
+    }
+}

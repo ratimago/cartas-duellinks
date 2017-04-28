@@ -1,0 +1,15 @@
+//////////*****   Sprite   ***//////////
+@mixin sprite ($x, $y) {
+    background: url('/imagenes/sprite.png') no-repeat $x $y;
+}
+
+@mixin tamano ($ancho, $alto){
+    height: $alto;
+    width: $ancho;
+    box-sizing: border-box;
+}
+
+@mixin fondosEstaticos ($fondos-url){
+    background: url( #{$fondos-url} ) no-repeat fixed center center;
+    background-size: cover;
+}

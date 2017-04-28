@@ -1,0 +1,114 @@
+main.interna-blog{
+    @include fondosEstaticos ($fondos-url: '/imagenes/blog/fondo-blog.jpg');
+
+    section.titulo-noticia-blog{
+        .row.row-sin-aire{
+            margin-bottom: 0;
+        }
+        
+        p{
+            color: #545454;
+            font-weight: lighter;
+
+            &.regresar{
+                a{
+                    color: #545454;
+                    font-size: 14px;
+                    font-weight: lighter;
+                    transition: all 0.5s;
+
+                    &:hover{
+                        color: $rojo;
+                    }
+                }
+            }
+
+            &.categoria{
+                font-family: 'Lato', sans-serif;
+                font-size: 14px;
+                margin-bottom: 0;
+
+                span{
+                    font-family: 'Oswald', sans-serif;
+                    font-size: 18px;
+                }
+
+                a{
+                    color: #545454;
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    transition: all 0.5s;
+
+                    &:hover{
+                        color: $rojo;
+                    }
+                }
+            }
+
+            &.fecha{
+                padding-left: 16px;
+                font-size: 13px;
+                font-weight: 400;
+                
+                &::before{
+                    background: url('/imagenes/sprite.png') no-repeat -120px -119px;
+                    content: ' ';
+                    display: block;
+                    position: absolute;
+                    height: 12px;
+                    margin-left: -16px;
+                    margin-top: 3px;
+                    width: 12px;
+                }
+            }
+
+            &.compartir{
+                display: inline-block;
+                font-family: 'Lato', sans-serif;
+                padding-right: 15px;
+
+                @media #{$large-and-up}{
+                    margin-top: 25px;
+                }
+            }
+        }
+
+        .addthis_sharing_toolbox{
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        h1{
+            font-size: 36px;
+            font-weight: 500;
+            margin: 15px 0;
+            text-transform: uppercase;
+        }
+    }
+
+    section.galeria{
+        margin-bottom: 40px;
+    }
+
+    section.texto{
+        .row{
+            margin-bottom: 0;
+        }
+
+        .texto-embebido{
+            padding: 22px 22px 44px 26px;
+            margin-bottom: 73px;
+
+            p{
+                color: #313131;
+                font-family: 'Lato', sans-serif;
+                font-weight: 300;
+            }
+
+            img{
+                height: auto;
+                max-width: 100%;
+            }
+        }
+    }
+}

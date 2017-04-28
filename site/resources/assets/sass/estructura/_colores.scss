@@ -1,0 +1,21 @@
+//////////***  Variables de colores  ***//////////
+//Colores solidos
+$rojo: #ed1c24;
+$gris: #545454;
+$blanco: #ffffff;
+$negro: #000000;
+
+//////////***  Clases auxiliares para colores  ***//////////
+.rojo{
+    background-color: $rojo;
+}
+.texto-rojo{
+    color: $rojo !important;
+}
+
+.gris{
+    background-color: $gris;
+}
+.texto-gris{
+    color: $gris;
+}

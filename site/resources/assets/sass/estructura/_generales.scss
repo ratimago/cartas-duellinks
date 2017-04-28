@@ -1,0 +1,86 @@
+html,body{
+    overflow-x: hidden;
+    //height: 100%;
+}
+
+html{
+    height: 100%;
+}
+
+main{
+    min-height: calc(100% - 221px);
+}
+
+.invitacion-scroll{
+    @include tamano($ancho:40px, $alto: 40px);
+    -webkit-animation-duration: 10s;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-iteration-count: 3;
+    background: url(/imagenes/scrolls.png) no-repeat center;
+    bottom: 5px;
+    cursor:pointer;
+    right: 5px;
+    position: fixed;
+    z-index: 9;
+
+    @media #{$medium-and-up}{
+        @include tamano($ancho:100px, $alto: 100px);
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+.owl-height{
+    @media #{$large-and-up}{
+        height: auto !important
+    }
+}
+
+.modal{
+    &.bottom-sheet{
+        height: 100%;
+        max-height: 100%;
+        
+        .modal-content{
+            ul{
+                li{
+                    display: block;
+                    height: 70px;
+
+                    a{
+                        height: 70px;
+                        line-height: 50px;
+
+                        &:hover{
+                            p{
+                                color: $rojo !important;
+                            }
+                        }
+
+                        p{
+                            margin: 0;
+                            margin-left: 120px;
+                            text-transform: uppercase;
+                            transition: all 0.5s;
+                            
+                            strong{
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+a{
+    &.btn{
+        &.extra-extra-large{
+            height: auto;
+            max-width: 100%;
+            width: auto;
+            line-height: 35px;
+        }
+    }
+}

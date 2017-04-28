@@ -1,0 +1,15 @@
+@media print { 
+    nav ul.right.hide-on-med-and-down, 
+    .side-nav, 
+    .menu-secundario, 
+    .button-collapse, 
+    .slider,
+    a.btn,
+    footer,{ 
+        display: none !important;  
+    }
+
+    .telefono-movil.pagina-principal{
+        width: 800px;
+    }
+}

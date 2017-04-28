@@ -1,0 +1,248 @@
+header{
+    .navbar-fixed{
+        nav{
+            border-bottom: 3px solid $rojo;
+            box-shadow: none;
+
+            .brand-logo{
+                height: 60px;
+
+                @media #{$large-and-up} {
+                    height: 80px;
+                }
+
+                img{
+                    margin-top: 5px;
+
+                    @media #{$large-and-up} and (max-width:1185px) {
+                        max-width: 126px;
+                        margin-top: 15px;
+                    }
+
+                    @media #{$medium-and-up} {
+                        margin-top: 20px;
+                    } 
+                }
+            }
+
+            .button-collapse{
+                transition: all 0.5s;
+                &:hover{
+                    color: $rojo;
+                }
+            }
+            
+            .telefono-movil{
+                transition: all 0.5s;
+                width: 190px;
+
+                @media #{$small-and-down} {
+                    height: 45px;
+                    line-height: 45px;
+                }
+
+                @media (min-width: 740px){
+                    display: block;
+                    position: relative;
+                    float: right;
+                }
+
+                @media (max-width: 739px){
+                    left: 50%;
+                    transform: translateX(-50%);
+                    position: absolute;
+                    margin-top: 52px;
+                    margin-top: 70px;
+                    line-height: 47px;
+                    height: 41px;
+                }
+
+                &:hover{
+                    color: $rojo;
+                }
+
+                i{
+                    @media #{$small-and-down} {
+                        height: 45px;
+                    }
+
+                    @media (max-width: 739px){
+                        line-height: 51px;
+                    }
+
+                    margin-right: 5px;
+                }
+            }
+            
+            ul.right{
+                li{
+                    &:last-child{
+                        a{
+                            line-height: 79px;
+                            background-color: #202020;
+
+                            span{
+                                vertical-align: bottom;
+                            }
+                        }
+                    }
+
+                    &:nth-last-of-type(2){
+                        a{
+                            @media (min-width:1185px){
+                                padding-right: 72px;
+                            }
+                        }
+                    }
+                    a{
+                        font-size: 18px;
+                        font-weight: lighter;
+                        line-height: 79px;
+                        text-transform: uppercase;
+                        transition: all 0.5s;
+
+                        @media #{$large-and-up} and (max-width: 1028px){
+                            font-size: 17px;
+                        }
+
+                        @media (min-width:1300px){
+                            padding: 0 26px;
+                        }
+
+                        &:hover{
+                            color: $rojo;
+                        }
+
+                        i.left{
+                            margin-right: 5px; 
+                        }
+
+                        span{
+                            font-size: 21px;
+                        }
+                    }
+
+                    &.active{
+                        a{
+                            color: $rojo;
+                        }
+                    }
+                }  
+            }
+            
+            ul.side-nav{
+                border-right: 2px solid $rojo;
+                li{
+                    a{
+                        color: white;
+
+                        img{
+                            max-width: 150px;
+                            margin-top: 20px;
+                        }
+
+                        &:hover{
+                            color: $rojo;
+                        }
+                    }
+
+                    &.active{
+                        a{
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-secundario{
+        min-height: 54px;
+        
+        .row{
+            margin-bottom: 0;
+        }
+        
+        a{
+            &:hover{
+                p{
+                    color: $rojo;
+                    
+                    &::after{
+                        opacity: 1;
+                    }
+                }
+                
+                &.solicita{
+                    p{                    
+                        &::after{
+                            width: 250px;
+                        }
+                    }
+                }
+                
+                &.encuentra{
+                    p{                    
+                        &::after{
+                            width: 320px;
+                        }
+                    }
+                }
+            }
+            
+            &.solicita{
+                p{
+                    @media #{$medium-and-down} {
+                        margin-bottom: 0;
+                    }
+                    
+                    &::after{
+                        left: 38px;
+                    }
+                }
+            }
+            
+            
+            
+            &.encuentra{
+                p{                    
+                    &::after{
+                        left: 30px;
+                    }
+                }
+            }
+            
+            p{
+                @media #{$medium-and-up} {
+                    font-size: 23px;
+                }
+                font-size: 17px;
+                font-weight: 400;
+                color: $gris;
+                display: block;
+                margin: 5px 0; 
+                transition: all 0.5s;
+                
+                img{
+                    vertical-align: bottom;
+                    margin-right: 20px;
+                }
+                
+                @media #{$medium-and-up} {                
+                    &::after{
+                        width: 0;
+                        opacity: 0;
+                        content: "";
+                        display: block;
+                        height: 3px;
+                        background-color: red;
+                        position: relative;
+
+                        margin: auto;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+    }
+}

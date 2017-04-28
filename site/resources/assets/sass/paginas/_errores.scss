@@ -1,0 +1,54 @@
+main.error{
+    section.mensaje-error{
+        @include fondosEstaticos ($fondos-url: '/imagenes/error/fondo-404.jpg');
+        padding-bottom: 100px;
+
+        @media #{$medium-and-up} {
+            padding-bottom: 0;
+        }
+
+        @media #{$medium-and-up} {
+            min-height: 648px;
+        }
+
+        p{
+            color: white;
+            font-family: 'Lato';
+            font-size: 20px;
+            font-weight: lighter;
+            margin-top: 100px;
+
+        }
+
+        .row{
+            margin-bottom: 0;
+        }
+    }
+
+    section.gracias{
+        background: url(/imagenes/financiamiento/fondo-financiamiento.jpg) no-repeat fixed center;
+        background-size: cover;
+        padding-bottom: 100px;
+
+        @media #{$medium-and-up} {
+            padding-bottom: 0;
+        }
+
+        @media #{$medium-and-up} {
+            min-height: 648px;
+        }
+
+        p{
+            color: white;
+            font-family: 'Lato';
+            font-size: 20px;
+            font-weight: lighter;
+            margin-top: 100px;
+
+        }
+
+        .row{
+            margin-bottom: 0;
+        }
+    }
+}

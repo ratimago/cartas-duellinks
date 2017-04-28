@@ -1,0 +1,84 @@
+footer {
+    background: #EFF2FB;
+    margin-top: 50px;
+    padding: 15px 0;
+}
+
+/*footer.relative {
+    position: relative;
+}
+
+footer.fixed {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+footer p, footer a {
+    color: #08088A;
+    float: right;
+    margin: 0;
+    padding: 0 10px 0 0;
+}
+
+footer p:hover, footer a:hover {
+    color: #FFF;
+}
+
+footer p {
+    float: left;
+    padding: 0 0 0 10px;
+}*/
+
+.navbar.navbar-default {
+    background: #bdba37;
+}
+
+.navbar.navbar-default .navbar-brand {
+    background:  #bdba37;
+    padding: 5px 0px;
+}
+
+.navbar.navbar-default .navbar-brand img {
+    margin: 0 auto;
+    max-width: 140px;
+    width: 100%;
+}
+
+.navbar.navbar-default .navbar-nav li:hover {
+    background: #bdba37;
+}
+
+a.btn-lg:hover {
+    color: #bdba37;
+}
+
+a.btn-lg {
+    color: #bdba37;
+}
+
+.longLabel {
+    white-space: normal;
+}
+
+.listSuggestions {
+    border: 1px solid #ccc;
+    list-style-type: none;
+    padding: 0;
+}
+
+.listSuggestions li {
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.listSuggestions li:hover {
+    background: #bdba37;
+    color: #FFF;
+}
+
+.my_handler {
+    cursor: move;
+}
+
+/*# sourceMappingURL=style.css.map */

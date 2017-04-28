@@ -1,0 +1,86 @@
+main.concesionarios{
+    @include fondosEstaticos ($fondos-url: '/imagenes/concesionarios/fondo-concesionarios.jpg');
+
+    .row-sin-margen{
+        margin-bottom: 0;
+    }
+
+    h2{
+        color: white;
+        font-size: 26px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .input-field{
+        margin-top: 0;
+    } 
+
+    .informacion{
+        background-color:  rgba($rojo, 0.4);
+        height: auto;
+        min-height: 185px;
+        padding: 20px 22px;
+        transition: all 0.5s;
+
+        h3{
+            color:  white;
+            font-size: 30px;
+            font-weight: lighter;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        p{
+            color: white;
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            font-weight: 300; 
+        }
+
+        .imagen-info{
+            background: {
+            	size: cover;
+            	repeat: no-repeat;
+                position: center;
+            }
+            float: left;
+            margin-right: 24px;
+            height: 170px;
+            width: 260px;
+
+        }
+
+        .boton-google{
+            padding: 0;
+        }
+    }
+
+    .titulopin{
+        font-family: 'Oswald', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .boton-region{
+        margin-top:20px;
+
+        @media #{$medium-and-down}{
+            margin-bottom: 20px;
+            float: none !important;
+        }
+    }
+
+    .descarga{
+        background: transparent !important;
+        border: 1px solid white !important;
+        margin-top: 30px;
+
+        &:hover{
+            background-color: $rojo !important;
+            border: 1px solid $rojo !important;
+        }
+    }
+    
+}

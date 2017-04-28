@@ -1,0 +1,119 @@
+footer{
+    border-top: 2px solid $rojo;
+    
+    @media #{$large-and-up} {
+        height: 65px;
+    }
+    
+    .redesSociales{
+        @media #{$large-and-up}{
+            text-align: left !important;
+        }
+        a{
+            line-height: 65px;
+        }
+        
+        .facebook, .twitter, .youtube, .blog{
+            display: inline-block;
+            margin: 0 18px;
+            transition: all 0.5s;
+            transform: scale(1.2);
+            vertical-align: middle;
+
+            @media #{$large-and-up}{
+                margin: 0 20px; 
+                transform: scale(1);
+            }
+        }
+        
+        .blog{
+            color: white;
+            font-size: 12px;
+            font-family: 'Lato', sans-serif;
+            transition: all 0.5;
+            
+            &:hover{
+                color: $rojo;
+            }
+        }
+
+        .facebook{
+            @include sprite ($x: -119px, $y: -59px);
+            @include tamano ($ancho: 9px, $alto: 15px);
+            
+            &:hover{
+                @include sprite ($x: -119px, $y: -89px);
+            }
+        }
+
+        .twitter{
+            @include sprite ($x: -149px, $y: -59px);
+            @include tamano ($ancho: 19px, $alto: 15px);
+            
+            &:hover{
+                @include sprite ($x: -149px, $y: -89px);
+            }
+        }
+
+        .youtube{
+            @include sprite ($x: -189px, $y: -59px);
+            @include tamano ($ancho: 17px, $alto: 15px);
+            
+            &:hover{
+                @include sprite ($x: -189px, $y: -89px);
+            }
+        }
+    }
+    
+    .menu-footer{
+        ul{
+            margin: 0;
+            
+            @media #{$large-and-up} {
+                float: right; 
+            }
+            
+            li{
+                display: block;
+                text-align: center;
+
+                &.active{
+                    a{
+                        color: $rojo;
+                    }
+                }
+                
+                @media #{$large-and-up} {
+                    display: inline-block; 
+                }
+                
+                a{
+                    color: white;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 65px;
+                    padding: 0 15px;
+                    transition: all 0.5s;
+                    
+                    &:hover{
+                        color: $rojo;
+                    }
+                }
+            }
+        }
+
+        p{
+            font-weight: lighter;
+            line-height: 65px;
+            margin: 0;
+
+            @media #{$medium-and-down}{
+                text-align: center;
+            }
+        }
+    }
+    
+    .row{
+        margin-bottom: 0;
+    }
+}

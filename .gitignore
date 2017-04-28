@@ -1,0 +1,10 @@
+site/vendor/
+site/vendor/composer/autoload_real.php
+site/.env
+.idea
+node_modules/
+public_html/blog/wp-config.php
+public_html/filesUpdates
+public_html/filesUpdate
+public_html/filesUpdates
+/nbproject/private/
